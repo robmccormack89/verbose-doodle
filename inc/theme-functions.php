@@ -5,6 +5,14 @@
  * @package Verbose_Doodle
  */
  
+ //Remove Gutenberg Block Library CSS from loading on the frontend
+ function smartwp_remove_wp_block_library_css(){
+     wp_dequeue_style( 'wp-block-library' );
+     wp_dequeue_style( 'wp-block-library-theme' );
+     wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS
+ } 
+ add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
+ 
 // disbale embed functions & scripts (wp-embed-min.js)
 // enable these functions if planning to embed other people's wp posts inside your own posts or vice versa
 // this also relates to twitter/social embeds

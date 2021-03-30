@@ -58,7 +58,7 @@ var sass = require("gulp-sass"),
 
 var paths = {
     styles: {
-      src: "assets/sass/*.scss",
+      src: "assets/scss/*.scss",
       dest: "assets/css/"
     }
 };

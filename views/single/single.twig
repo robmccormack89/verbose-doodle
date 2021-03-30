@@ -42,7 +42,7 @@
               
               {% block single_lead %}
                 {% if fn('has_excerpt') %}
-                  <p class="uk-text-lead uk-drop-cap uk-margin-remove" hidden>{{ post.preview.read_more('')|e('esc_html') }}</p>
+                  <p class="uk-text-lead uk-dropcap uk-margin-remove" hidden>{{ post.preview.read_more('')|e('esc_html') }}</p>
                 {% endif %}
               {% endblock %}
               

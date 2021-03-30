@@ -1,0 +1,15 @@
+// Import my custom variables & mixins
+@import "assets/scss/uikit/variables-theme.scss";
+@import "assets/scss/uikit/mixins-theme.scss";
+
+// Import themed uikit components (with custom variables)
+@import "assets/scss/uikit/theme/_import.scss";
+
+// custom mixin overwrites
+// @import "theme/accordion-mixins.scss";
+
+// Import main uikit components
+@import "assets/scss/uikit/_import.scss";
+
+// import your custom sass styles
+@import "style.scss";
