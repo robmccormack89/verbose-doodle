@@ -2,7 +2,7 @@
 /**
 * The search
 *
-* @package Rmcc_Starter
+* @package Verbose_Doodle
 */
 
 $context = Timber::context();

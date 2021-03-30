@@ -1,8 +1,8 @@
 <?php
 /**
-* Rmcc_Starter functions and definitions
+* Verbose_Doodle functions and definitions
 *
-* @package Rmcc_Starter
+* @package Verbose_Doodle
 */
 
 // stuff to say we need timber activated!! see TGM Plugin activation library for php
@@ -49,4 +49,4 @@ if( class_exists( 'Timber' ) ) {
 /**
 * Custom Widget
 */
-require get_template_directory() . '/widgets/rmcc-html-widget.php';
+require get_template_directory() . '/widgets/verbose-doodle-html-widget.php';

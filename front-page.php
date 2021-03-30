@@ -2,7 +2,7 @@
 /**
 * The front page template (when backend settings for front page display are set to static or latest posts)
 *
-* @package Rmcc_Starter
+* @package Verbose_Doodle
 */
 
 $context = Timber::context();

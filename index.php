@@ -2,7 +2,7 @@
 /**
 * The main template file
 *
-* @package Rmcc_Starter
+* @package Verbose_Doodle
 */
 
 $context = Timber::context();

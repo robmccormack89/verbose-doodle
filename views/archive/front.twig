@@ -19,10 +19,10 @@
                     {% endif %}
                     <div class="uk-overlay uk-overlay-primary uk-position-cover uk-flex uk-flex-center uk-flex-middle uk-light uk-text-center">
                       <div>
-                        <span class="uk-label home-hero-label">{{ __('Featured Article', 'rmcc-starter') }}</span>
+                        <span class="uk-label home-hero-label">{{ __('Featured Article', 'verbose-doodle') }}</span>
                         <h1 class="uk-margin-top uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">{{post.title}}</h1>
                         <div class="uk-container uk-container-small">{{ post.preview.length(25).force.read_more('') }}</div>
-                        <a href="{{post.link}}" class="uk-button uk-button-default uk-margin-top">{{ __('Read more', 'rmcc-starter') }}</a>
+                        <a href="{{post.link}}" class="uk-button uk-button-default uk-margin-top">{{ __('Read more', 'verbose-doodle') }}</a>
                       </div>
                     </div>
                   </div>
@@ -36,9 +36,9 @@
           <div class="uk-background-muted uk-height-large uk-cover-container">
             <div class="uk-flex uk-flex-center uk-flex-middle uk-text-center uk-position-cover">
               <div>
-                <h1 class="uk-text-bold"><span>{{ __('Homepage Hero Section', 'rmcc-starter') }}</span></h1>
+                <h1 class="uk-text-bold"><span>{{ __('Homepage Hero Section', 'verbose-doodle') }}</span></h1>
                 <div class="uk-container uk-container-small">
-                  <p>{{ __('No posts found. This section shows your most recent sticky post. Add a post, make it sticky & dont forget to add a featured image.', 'rmcc-starter') }}</p>
+                  <p>{{ __('No posts found. This section shows your most recent sticky post. Add a post, make it sticky & dont forget to add a featured image.', 'verbose-doodle') }}</p>
                 </div>
               </div>
             </div>
@@ -52,7 +52,7 @@
       <div class="uk-container">
         
         {% if home_featured is not empty %}
-          <h2 class="uk-text-bold">{{ __('Featured Articles', 'rmcc-starter') }}</h2>
+          <h2 class="uk-text-bold">{{ __('Featured Articles', 'verbose-doodle') }}</h2>
           <div uk-slider="velocity: 5">
             <div class="uk-position-relative">
               <div class="uk-slider-container">
@@ -73,8 +73,8 @@
           </div>
         {% else %}
           <div class="uk-background-muted uk-padding">
-            <h2 class="uk-text-bold"><span>{{ __('Featured Articles', 'rmcc-starter') }}</span></h2>
-            <p class="uk-margin-remove-bottom">{{ __('No posts found. This section shows your next 3 most recent sticky posts. Add some more posts, make them sticky & dont forget to add featured images.', 'rmcc-starter') }}</p>
+            <h2 class="uk-text-bold"><span>{{ __('Featured Articles', 'verbose-doodle') }}</span></h2>
+            <p class="uk-margin-remove-bottom">{{ __('No posts found. This section shows your next 3 most recent sticky posts. Add some more posts, make them sticky & dont forget to add featured images.', 'verbose-doodle') }}</p>
           </div>
         {% endif %}
       
@@ -88,7 +88,7 @@
           <div class="uk-article uk-width-2-3@m">
             
             {% if posts is not empty %}
-              <h3 class="uk-text-bold">{{ __('More Articles', 'rmcc-starter') }}</h3>
+              <h3 class="uk-text-bold">{{ __('More Articles', 'verbose-doodle') }}</h3>
               <div class="archive-posts">
                 {% for post in posts %}
                   {% include 'tease.twig' %}
@@ -96,8 +96,8 @@
               </div>
             {% else %}
               <div class="uk-background-muted uk-padding">
-                <h3 class="uk-text-bold"><span>{{ __('More Articles', 'rmcc-starter') }}</span></h3>
-                <p class="uk-margin-remove-bottom">{{ __('No posts found. This section shows your 4 most recent non-sticky posts. Add some more posts & add featured images.', 'rmcc-starter') }}</p>
+                <h3 class="uk-text-bold"><span>{{ __('More Articles', 'verbose-doodle') }}</span></h3>
+                <p class="uk-margin-remove-bottom">{{ __('No posts found. This section shows your 4 most recent non-sticky posts. Add some more posts & add featured images.', 'verbose-doodle') }}</p>
               </div>
             {% endif %}
             

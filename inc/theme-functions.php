@@ -2,7 +2,7 @@
 /**
  * Theme functions & bits
  *
- * @package Rmcc_Starter
+ * @package Verbose_Doodle
  */
  
 // disbale embed functions & scripts (wp-embed-min.js)

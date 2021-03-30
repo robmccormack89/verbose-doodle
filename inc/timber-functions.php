@@ -2,7 +2,7 @@
 /**
  * Timber theme class & other functions for Twig.
  *
- * @package Rmcc_Starter
+ * @package Verbose_Doodle
  */
 
 // Define paths to Twig templates
@@ -24,14 +24,14 @@ Timber::$autoescape = false;
  * We're going to configure our theme inside of a subclass of Timber\Site
  * You can move this to its own file and include here via php's include("MySite.php")
  */
-class RmccStarter extends Timber\Site
+class VerboseDoodle extends Timber\Site
 {
   /** Add timber support */
   public function __construct()
   {
     add_action('after_setup_theme', array( $this, 'theme_supports' ));
-    add_action('wp_enqueue_scripts', array( $this, 'rmcc_starter_enqueue_assets'));
-    add_action('widgets_init', array( $this, 'rmcc_starter_custom_uikit_widgets_init'));
+    add_action('wp_enqueue_scripts', array( $this, 'verbose_doodle_enqueue_assets'));
+    add_action('widgets_init', array( $this, 'verbose_doodle_custom_uikit_widgets_init'));
     add_filter('timber/context', array( $this, 'add_to_context' ));
     add_filter('timber/twig', array( $this, 'add_to_twig' ));
     add_action('init', array( $this, 'register_post_types' ));
@@ -56,18 +56,18 @@ class RmccStarter extends Timber\Site
     // Register widget areas
     if (function_exists('register_sidebar')) {
       register_sidebar(array(
-        'name' => esc_html__('Sidebar Area', 'rmcc-starter'),
+        'name' => esc_html__('Sidebar Area', 'verbose-doodle'),
         'id' => 'sidebar',
-        'description' => esc_html__('Sidebar widget area; you can add multiple widgets here. Try the rmcc custom html widget with uikit markup.', 'rmcc-starter'),
+        'description' => esc_html__('Sidebar widget area; you can add multiple widgets here. Try the verbose doodle custom html widget with uikit markup.', 'verbose-doodle'),
         'before_widget' => '',
         'after_widget' => '',
         'before_title' => '<h3 class="uk-text-bold widget-title">',
         'after_title' => '</h3>'
       ));
       register_sidebar(array(
-          'name' => esc_html__('Footer Area', 'rmcc-starter'),
+          'name' => esc_html__('Footer Area', 'verbose-doodle'),
           'id' => 'sidebar-footer',
-          'description' => esc_html__('Footer widget area; use only one widget here. Try the rmcc custom html widget with uikit markup.', 'rmcc-starter'),
+          'description' => esc_html__('Footer widget area; use only one widget here. Try the verbose doodle custom html widget with uikit markup.', 'verbose-doodle'),
           'before_widget' => '',
           'after_widget' => '',
           'before_title' => '<h4 class="widget-title">',
@@ -80,8 +80,8 @@ class RmccStarter extends Timber\Site
   {
     // This theme uses wp_nav_menu() in one locations.
     register_nav_menus(array(
-      'main' => __('Main Menu', 'rmcc-starter'),
-      'mobile' => __('Mobile Menu', 'rmcc-starter'),
+      'main' => __('Main Menu', 'verbose-doodle'),
+      'mobile' => __('Mobile Menu', 'verbose-doodle'),
     ));
   }
 
@@ -149,7 +149,7 @@ class RmccStarter extends Timber\Site
       'flex-height' => true
     ));
 
-    load_theme_textdomain( 'rmcc-starter', get_template_directory() . '/languages' );
+    load_theme_textdomain( 'verbose-doodle', get_template_directory() . '/languages' );
     
     // remove emoji styles & scripts
     remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
@@ -173,23 +173,23 @@ class RmccStarter extends Timber\Site
     remove_filter( 'pre_oembed_result', 'wp_filter_pre_oembed_result', 10 );
   }
   
-  public function rmcc_starter_enqueue_assets()
+  public function verbose_doodle_enqueue_assets()
   {
     
-    wp_enqueue_style('rmcc-starter-base', get_template_directory_uri() . '/assets/css/base.css');
+    wp_enqueue_style('verbose-doodle-base', get_template_directory_uri() . '/assets/css/base.css');
     
-    wp_enqueue_script('rmcc-starter-base', get_template_directory_uri() . '/assets/js/base.js', '', '', false);
+    wp_enqueue_script('verbose-doodle-base', get_template_directory_uri() . '/assets/js/base.js', '', '', false);
     
-    wp_enqueue_script('rmcc-starter-global', get_template_directory_uri() . '/assets/js/global.js', '', '', true);
+    wp_enqueue_script('verbose-doodle-global', get_template_directory_uri() . '/assets/js/global.js', '', '', true);
     
-    wp_enqueue_script('rmcc-starter-theme', get_template_directory_uri() . '/assets/js/theme.js', '', '', true);
+    wp_enqueue_script('verbose-doodle-theme', get_template_directory_uri() . '/assets/js/theme.js', '', '', true);
     
-    wp_enqueue_style('rmcc-starter-theme', get_stylesheet_uri());
+    wp_enqueue_style('verbose-doodle-theme', get_stylesheet_uri());
   }
   
-  public function rmcc_starter_custom_uikit_widgets_init()
+  public function verbose_doodle_custom_uikit_widgets_init()
   {
-    register_widget("Rmcc_Starter_Custom_Widget_Class");
+    register_widget("Verbose_Doodle_Custom_Widget_Class");
   }
 
   public function add_to_twig($twig)
@@ -200,4 +200,4 @@ class RmccStarter extends Timber\Site
   }
 }
 
-new RmccStarter();
+new VerboseDoodle();
