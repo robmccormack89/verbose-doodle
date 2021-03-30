@@ -10,33 +10,62 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
+      /* font stylings */
       html,
-      .uk-navbar-item, .uk-navbar-nav>li>a, .uk-navbar-toggle {
+      .pt-serif {
         font-family: 'PT Serif', serif;
       }
-      .uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, .uk-heading-2xlarge, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge, h1, h2, h3, h4, h5, h6,
+      .uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, 
+      .uk-heading-2xlarge, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge, h1, h2, h3, h4, h5, h6,
       .uk-logo {
         font-family: 'Poppins', sans-serif;
         letter-spacing: -2px;
         font-weight: 700;
         word-spacing: 2px;
       }
-    
+      .poppins, 
+      .site-tagline, 
+      .uk-article-meta, 
+      .uk-label, 
+      .uk-navbar-item, .uk-navbar-nav>li>a, .uk-navbar-toggle,
+      .uk-button {
+        font-family: 'Poppins', sans-serif;
+        /* letter-spacing: 0px;
+        word-spacing: 1px; */
+      }
+      .uk-label {
+        background-color: #f10;
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        padding: 2px 12px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        word-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .uk-label, .uk-light .uk-label {
+        background-color: #f10;
+        color: #fff;
+      }
+      .uk-button {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        letter-spacing: -1px;
+        word-spacing: 1px;
+      }
       /* reset bold elements */
       .uk-text-bold {
         font-weight: 700;
       }
-      
-      .header-logo .site-logo, .header-logo .site-tagline {
+      .header-logo .site-logo, 
+      .header-logo .site-tagline {
         line-height: 1rem;
       }
-      
-      .uk-light .uk-text-lead {
-        color: #fff;
-      }
-      
       .uk-text-lead {
         font-size: 1.3rem;
+      }
+      .uk-light .uk-text-lead {
+        color: #fff;
       }
     </style>
   </head>

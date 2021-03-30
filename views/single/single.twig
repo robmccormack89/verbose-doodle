@@ -18,8 +18,8 @@
               
               {% block single_header_meta %}
                 <p class="uk-article-meta">
-                  {{ __('Published on', 'verbose-doodle') }} {{post.date|e('esc_html')}}. 
-                  {{ __('Posted in', 'verbose-doodle') }} {{ post.terms( {query:{taxonomy:'category', orderby:'name', order: 'ASC', parent: 0, childless: 0, child_of: 0}} )|join(', ')|e('esc_html') }}
+                  {{ post.terms( {query:{taxonomy:'category', orderby:'name', order: 'ASC', parent: 0, childless: 0, child_of: 0}} )|join(', ')|e('esc_html') }} | 
+                  {{ fn('human_time_diff', fn('get_the_time', 'U'), fn('current_time', 'timestamp'))|e('esc_html') ~ ' ' ~ __('ago', 'verbose-doodle')}}
                 </p>
               {% endblock %}
               
