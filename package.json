@@ -4,10 +4,12 @@
   "main": "index.js",
   "dependencies": {
     "uikit": "^3.6.18",
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "infinite-scroll": "^4.0.1"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
     "gulp-if": "^2.0.2",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.1",
