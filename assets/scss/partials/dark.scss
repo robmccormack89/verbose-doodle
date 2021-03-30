@@ -1,29 +1,15 @@
 /* dark backgrounds */
-body.uk-light {
-  background: $global-secondary-background;
-}
-.uk-light .uk-modal-dialog {
-  background: $global-secondary-background;
-}
-.uk-light .uk-navbar-dropdown {
-  background: $global-secondary-background;
-}
-.uk-light .uk-section-default {
-  background: $global-secondary-background;
-}
+body.uk-light,
+.uk-light .uk-modal-dialog,
+.uk-light .uk-navbar-dropdown, 
+.uk-light .uk-section-default, 
 .uk-light .uk-background-default {
   background: $global-secondary-background;
 }
 /* dark muted backgrounds */
-.uk-light .uk-background-muted {
-  background: $global-emphasis-color;
-}
-.uk-light .uk-modal-close-full {
-  background: $global-emphasis-color;
-}
-.uk-light .uk-section-muted {
-  background: $global-emphasis-color;
-}
+.uk-light .uk-background-muted, 
+.uk-light .uk-modal-close-full, 
+.uk-light .uk-section-muted, 
 .uk-light .uk-tile-muted {
   background: $global-emphasis-color;
 }
@@ -32,9 +18,7 @@ body.uk-light {
   color: $inverse-global-muted-color;
 }
 /* links focus/hover */
-.uk-light .uk-navbar-dropdown-nav > li > a:focus {
-  color: $inverse-global-color;
-}
+.uk-light .uk-navbar-dropdown-nav > li > a:focus, 
 .uk-light .uk-navbar-dropdown-nav > li > a:hover {
   color: $inverse-global-color;
 }
