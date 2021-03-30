@@ -82,7 +82,7 @@
                   <div class="prev-article uk-text-left">
                     {% if post.next %}
                       <a href="{{ post.next.link|e('esc_url') }}" class="uk-link-reset">
-                        <div class="uk-text-emphasis uk-text-bold"><span uk-icon="icon: arrow-left"></span> {{ __('Previous Article', 'verbose-doodle') }}</div>
+                        <div class="uk-text-emphasis uk-text-bold"><i class="fas fa-arrow-left"></i> {{ __('Previous Article', 'verbose-doodle') }}</div>
                         <div class="uk-text-italic uk-width-large uk-visible@m">{{ post.next.title|e('esc_html') }}</div>
                       </a>
                     {% endif %}
@@ -91,7 +91,7 @@
                   <div class="next-article uk-text-right">
                     {% if post.prev %}
                       <a href="{{ post.prev.link|e('esc_url') }}" class="uk-link-reset">
-                        <div class="uk-text-emphasis uk-text-bold">{{ __('Next Article', 'verbose-doodle') }} <span uk-icon="icon: arrow-right"></span></div>
+                        <div class="uk-text-emphasis uk-text-bold">{{ __('Next Article', 'verbose-doodle') }} <i class="fas fa-arrow-right"></i></div>
                         <div class="uk-text-italic uk-width-large uk-visible@m">{{ post.prev.title|e('esc_html') }}</div>
                       </a>
                     {% endif %}

@@ -2,11 +2,10 @@
   <div data-template="pagination.twig">
     
     <div id="ThemePagination" class="pagination-block">
-      <ul class="uk-pagination uk-flex-center">
-
+      <ul>
         {% if posts.pagination.prev %}
           <li>
-            <a href="{{posts.pagination.prev.link}}" class="prev {{posts.pagination.prev.link|length ? '' : 'invisible'}}"><i uk-icon="icon: chevron-left"></i> {{ __('Previous Page', 'verbose-doodle') }}</a>
+            <a href="{{posts.pagination.prev.link}}" class="prev {{posts.pagination.prev.link|length ? '' : 'invisible'}}">{{ __('Previous Page', 'verbose-doodle') }}</a>
           </li>
         {% endif %}
         {% for page in posts.pagination.pages %}
@@ -20,10 +19,9 @@
         {% endfor %}
         {% if posts.pagination.next %}
           <li>
-            <a href="{{posts.pagination.next.link}}" class="next {{posts.pagination.next.link|length ? '' : 'invisible'}}">{{ __('Next Page', 'verbose-doodle') }} <i uk-icon="icon: chevron-right"></i></a>
+            <a href="{{posts.pagination.next.link}}" class="next {{posts.pagination.next.link|length ? '' : 'invisible'}}">{{ __('Next Page', 'verbose-doodle') }}</a>
           </li>
         {% endif %}
-
       </ul>
     </div>
   

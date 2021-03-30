@@ -13,7 +13,7 @@
             {{ site.title|e('esc_html') }}
           </a>
           <div>
-            <p class="site-tagline uk-text-small uk-margin-remove">Just another WordPress site</p>
+            <p class="site-tagline uk-text-small uk-margin-remove">{{ site.description|e('esc_html') }}</p>
           </div>
         </div>
       {% endif %}
@@ -25,7 +25,7 @@
           {% for item in menu_main.get_items %}
             {% if item.get_children %}
               <li class="{{ item.classes | join(' ')|e('esc_html') }}">
-                <a href="{{ item.link|e('esc_url') }}">{{ item.title|e('esc_html') }}<span uk-icon="icon: triangle-down; ratio: 0.8"></span></a>
+                <a href="{{ item.link|e('esc_url') }}">{{ item.title|e('esc_html') }}<i class="fas fa-angle-down fa-sm dropdown-icon"></i></a>
                 <div class="uk-navbar-dropdown">
                   <ul class="uk-nav uk-navbar-dropdown-nav">
                     {% for child in item.get_children %}
@@ -60,24 +60,23 @@
     <div class="header-icons-nav uk-navbar-right">
       
       <div class="search-toggle uk-visible@m">
-        <a class="uk-navbar-toggle" href="#modal-navbar-search" uk-search-icon uk-toggle></a>
+        <a class="uk-navbar-toggle" href="#modal-navbar-search" uk-toggle>
+          <i class="fas fa-search"></i>
+        </a>
       </div>
       
       <ul class="mobile-menu-toggle uk-navbar-nav uk-hidden@m">
         <li>
-          <a class="uk-navbar-toggle pull-right-15" uk-navbar-toggle-icon uk-toggle href="#offcanvas-mobile-nav">
+          <a class="uk-navbar-toggle" href="#offcanvas-mobile-nav" uk-toggle>
+            <i class="fas fa-bars"></i>
             <span class="uk-hidden">{{ __('Menu', 'verbose-doodle') }}</span>
           </a>
         </li>
       </ul>
       
-      <div class="dark-light-switcher uk-navbar-item pull-right-15">
-        <a id="DarkSwitch" class="dark-light-link moon-link pull-up-2 darklight-switch">
-          <img src="{{theme.link|e('esc_url')}}/assets/img/moon.svg" uk-svg>
-        </a>
-        <a id="LightSwitch" class="dark-light-link sun-link pull-up-2 darklight-switch">
-          <img src="{{theme.link|e('esc_url')}}/assets/img/sun.svg" uk-svg>
-        </a>
+      <div class="dark-light-switcher pull-right-15">
+        <a id="DarkSwitch" class="uk-navbar-toggle darklight-switch"><i class="far fa-moon"></i></a>
+        <a id="LightSwitch" class="uk-navbar-toggle darklight-switch"><i class="fas fa-sun"></i></a>
       </div>
       
     </div>
@@ -86,19 +85,23 @@
   
   <div id="modal-navbar-search" class="uk-modal-full" uk-modal>
     <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport>
-      <button class="uk-modal-close-full" type="button" uk-close></button>
+      <a class="uk-modal-close-full uk-link-toggle">
+        <i class="fas fa-times"></i>
+        <span class="uk-hidden">{{ __('Close', 'verbose-doodle') }}</span>
+      </a>
       <form class="uk-search uk-search-large" role="search" method="get" action="{{site.url|e('esc_url')}}">
         <input id="header-search" class="uk-search-input uk-text-center" type="search" placeholder="{{ __('Start typing...', 'verbose-doodle') }}" name="s" autofocus>
         <input type="hidden" name="post_type" value="post">
       </form>
     </div>
   </div>
-  <div id="offcanvas-mobile-nav" uk-offcanvas="flip: true; overlay: true">
+  <div id="offcanvas-mobile-nav" uk-offcanvas="flip: true; overlay: true; mode: push">
     <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
       
-      <button class="uk-offcanvas-close uk-close uk-icon" uk-close type="button">
+      <a class="uk-offcanvas-close">
+        <i class="fas fa-times"></i>
         <span class="uk-hidden">{{ __('Close', 'verbose-doodle') }}</span>
-      </button>
+      </a>
       
       <ul class="uk-nav uk-nav-default">
         <li class="uk-nav-header uk-text-bold uk-text-uppercase uk-margin-small-bottom">{{ __('Menu', 'verbose-doodle') }}</li>
@@ -127,7 +130,7 @@
         <li class="uk-nav-divider uk-margin-top"></li>
         <div class="uk-margin-top uk-position-z-index uk-position-relative">
           <form class="uk-search uk-search-default uk-width-1-1" role="search" method="get" action="{{site.url|e('esc_url')}}">
-            <span class="uk-search-icon-flip" uk-search-icon></span>
+            <span class="search-input-icon"><i class="fas fa-search"></i></span>
             <input class="uk-search-input" type="search" placeholder="{{ __('Search...', 'verbose-doodle') }}" id="SearchMobile" name="s" autocomplete="off">
           </form>
         </div>
