@@ -179,8 +179,8 @@ class VerboseDoodle extends Timber\Site
     wp_enqueue_style('verbose-doodle-base', get_template_directory_uri() . '/assets/css/base.css');
     wp_enqueue_style('verbose-doodle-global', get_template_directory_uri() . '/assets/css/global.css');
     
-    wp_enqueue_script('verbose-doodle-base', get_template_directory_uri() . '/assets/js/base.js', '', '', false);
-    wp_enqueue_script('verbose-doodle-global', get_template_directory_uri() . '/assets/js/global.js', '', '', true);
+    wp_enqueue_script('verbose-doodle-base', get_template_directory_uri() . '/assets/js/global/base.min.js', '', '', false);
+    wp_enqueue_script('verbose-doodle-global', get_template_directory_uri() . '/assets/js/global/global.min.js', '', '', true);
     
     wp_enqueue_script('verbose-doodle-theme', get_template_directory_uri() . '/assets/js/theme.js', '', '', true);
     

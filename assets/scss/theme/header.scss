@@ -1,11 +1,4 @@
-// uikit modifications
-.uk-offcanvas-bar .uk-close,
-.uk-offcanvas-bar .uk-nav-default > li > a {
-  color: hsla(0, 0%, 100%, 0.8);
-}
-.uk-offcanvas-bar .uk-nav-default {
-  font-size: $global-font-size;
-}
+// uk-logo img
 .uk-logo > img {
   height: 30px;
 }
@@ -14,7 +7,7 @@
   margin-left: 3px;
   margin-top: 2px;
 }
-// offcanvas search input icon
+// search input icon
 .search-input-icon {
   position: absolute;
   top: 0;
@@ -26,4 +19,9 @@
   align-items: center;
   color: $global-muted-color;
   width: 40px;
+}
+// header logo / tagline
+.header-logo .site-logo, 
+.header-logo .site-tagline {
+  line-height: $global-font-size;
 }

@@ -1,9 +1,9 @@
 // Import my custom variables & mixins
-@import "assets/scss/uikit/variables-theme.scss";
-@import "assets/scss/uikit/mixins-theme.scss";
+@import "assets/scss/lib/uikit/variables-theme.scss";
+@import "assets/scss/lib/uikit/mixins-theme.scss";
 
 // Import themed uikit components (with custom variables)
-@import "assets/scss/uikit/theme/_import.scss";
+@import "assets/scss/lib/uikit/theme/_import.scss";
 
 // set offccanvas to white
 // $offcanvas-bar-background: #fff;
@@ -13,7 +13,7 @@
 // @import "theme/accordion-mixins.scss";
 
 // Import main uikit components
-@import "assets/scss/uikit/_import.scss";
+@import "assets/scss/lib/uikit/_import.base.scss";
 
-// import your custom sass styles
-@import "style.scss";
+// import custom sass styles (uses uikit variables)
+@import "assets/scss/theme/_import.scss";

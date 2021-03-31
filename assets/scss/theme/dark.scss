@@ -1,4 +1,4 @@
-/* dark backgrounds */
+// dark backgrounds
 body.uk-light,
 .uk-light .uk-modal-dialog,
 .uk-light .uk-navbar-dropdown, 
@@ -6,23 +6,23 @@ body.uk-light,
 .uk-light .uk-background-default {
   background: $global-secondary-background;
 }
-/* dark muted backgrounds */
+// dark muted backgrounds
 .uk-light .uk-background-muted, 
 .uk-light .uk-modal-close-full, 
 .uk-light .uk-section-muted, 
 .uk-light .uk-tile-muted {
   background: $global-emphasis-color;
 }
-/* links */
+// links
 .uk-light .uk-navbar-dropdown-nav > li > a {
   color: $inverse-global-muted-color;
 }
-/* links focus/hover */
+// links focus/hover
 .uk-light .uk-navbar-dropdown-nav > li > a:focus, 
 .uk-light .uk-navbar-dropdown-nav > li > a:hover {
   color: $inverse-global-color;
 }
-/* borders */
+// borders
 .uk-light .theme-border {
   border: 1px solid $inverse-global-border;
 }

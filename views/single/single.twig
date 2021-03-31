@@ -1,5 +1,39 @@
 {% extends "base.twig" %}
 
+{% block styles %}
+  <style>
+    /* single post comments */
+    .uk-comment-list .uk-comment~ul {
+      padding-left: 0.875rem;
+    }
+    .uk-comment-primary {
+      padding: 30px 0 0 0;
+      background-color: transparent;
+    }
+    .uk-comment-list .uk-comment~ul {
+      margin: 20px 0 0;
+    }
+    .uk-comment-list>:nth-child(n+2) {
+      margin-top: 20px;
+    }
+    @media only screen and (min-width:980px) {
+      .uk-comment-list .uk-comment~ul {
+        padding-left: 1.75em;
+      }
+    }
+    /* dropcap */
+    .uk-dropcap:first-letter, .uk-dropcap>p:first-of-type:first-letter {
+      display: block;
+      margin-right: 10px;
+      margin-top: -10px;
+      float: left;
+      font-size: 4.8em;
+      line-height: 1;
+      margin-bottom: -2px;
+    }
+  </style>
+{% endblock %}
+
 {% block content %}
   <div id="Single{{post.id|e('html_attr')}}" class="post-type-{{post.post_type|e('html_attr')}} {{post.class|e('esc_html')}} uk-section uk-container" data-template="single.twig">
     <div class="uk-grid-large" uk-grid>
@@ -11,24 +45,24 @@
             <header class="article-header">
             
               {% block single_title %}
-                <h1 class="uk-article-title">
+                <h1 class="uk-article-title uk-margin-small-bottom">
                   {{ post.title|e('esc_html') }}
                 </h1>
               {% endblock %}
               
               {% block single_header_meta %}
-                <p class="uk-article-meta">
-                  {{ post.terms( {query:{taxonomy:'category', orderby:'name', order: 'ASC', parent: 0, childless: 0, child_of: 0}} )|join(', ')|e('esc_html') }} | 
-                  {{ fn('human_time_diff', fn('get_the_time', 'U'), fn('current_time', 'timestamp'))|e('esc_html') ~ ' ' ~ __('ago', 'verbose-doodle')}}
+                <p class="uk-article-meta uk-margin-small-top uk-margin-small-bottom">
+                  {{ post.terms( {query:{taxonomy:'category', orderby:'name', order: 'ASC', parent: 0, childless: 0, child_of: 0}} )|join(', ')|e('esc_html') }}. 
+                  {{ fn('human_time_diff', fn('get_the_time', 'U'), fn('current_time', 'timestamp'))|e('esc_html') ~ ' ' ~ __('ago', 'verbose-doodle')}}.
                 </p>
               {% endblock %}
               
               {% block single_thumb %}
                 {% if post.thumbnail %}
-                  <figure>
+                  <figure class="uk-margin-small-top">
                     <img class="theme-border" data-src="{{ post.thumbnail.src|resize(800, 400)|e('esc_url') }}" width="800" height="400" alt="{{ post.thumbnail.alt|e('html_attr') }}" uk-img>
                     {% if post.thumbnail.caption %}
-                      <figcaption class="uk-padding-small uk-text-muted uk-text-center tease-image-caption">{{ post.thumbnail.caption|e('esc_html') }}</figcaption>
+                      <figcaption class="uk-text-muted uk-text-center">{{ post.thumbnail.caption|e('esc_html') }}</figcaption>
                     {% endif %}
                   </figure>
                 {% endif %}

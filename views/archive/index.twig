@@ -1,5 +1,15 @@
 {% extends "base.twig" %}
 
+{% block styles %}
+  <style>
+    /* standard tease post featured(sticky) label */
+    .tease-post-list .featured-label {
+      top: 10px;
+      left: 10px;
+    }
+  </style>
+{% endblock %}
+
 {% block content %}
   <div id="IndexArchive" class="uk-section uk-container" data-template="index.twig">
     <div class="uk-grid-large" uk-grid>
