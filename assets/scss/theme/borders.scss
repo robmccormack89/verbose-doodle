@@ -1,9 +1,3 @@
-// overflow fix
-body,
-html {
-  max-width: 100%;
-  overflow-x: hidden;
-}
 // theme borders
 .theme-border {
   border: 1px solid $global-border;
@@ -19,11 +13,4 @@ html {
 }
 .theme-border-left {
   border-left: 1px solid $global-border;
-}
-// utility classes
-.pull-right-15 {
-  margin-right: -15px;
-}
-.pull-up-2 {
-  margin-top: -2px;
 }

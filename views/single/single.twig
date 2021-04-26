@@ -1,39 +1,5 @@
 {% extends "base.twig" %}
 
-{% block styles %}
-  <style>
-    /* single post comments */
-    .uk-comment-list .uk-comment~ul {
-      padding-left: 0.875rem;
-    }
-    .uk-comment-primary {
-      padding: 30px 0 0 0;
-      background-color: transparent;
-    }
-    .uk-comment-list .uk-comment~ul {
-      margin: 20px 0 0;
-    }
-    .uk-comment-list>:nth-child(n+2) {
-      margin-top: 20px;
-    }
-    @media only screen and (min-width:980px) {
-      .uk-comment-list .uk-comment~ul {
-        padding-left: 1.75em;
-      }
-    }
-    /* dropcap */
-    .uk-dropcap:first-letter, .uk-dropcap>p:first-of-type:first-letter {
-      display: block;
-      margin-right: 10px;
-      margin-top: -10px;
-      float: left;
-      font-size: 4.8em;
-      line-height: 1;
-      margin-bottom: -2px;
-    }
-  </style>
-{% endblock %}
-
 {% block content %}
   <div id="Single{{post.id|e('html_attr')}}" class="post-type-{{post.post_type|e('html_attr')}} {{post.class|e('esc_html')}} uk-section uk-container" data-template="single.twig">
     <div class="uk-grid-large" uk-grid>

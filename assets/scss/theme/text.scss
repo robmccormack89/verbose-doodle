@@ -1,0 +1,10 @@
+/* dropcap */
+.uk-dropcap:first-letter, .uk-dropcap>p:first-of-type:first-letter {
+  display: block;
+  margin-right: 10px;
+  margin-top: -10px;
+  float: left;
+  font-size: 4.8em;
+  line-height: 1;
+  margin-bottom: -2px;
+}
